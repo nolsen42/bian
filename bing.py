@@ -19,7 +19,7 @@ def main():
 			time.sleep(3)
 			webbrowser.open('https://bing.com/search?q=%s' % (final))
 		else:
-			final = searchfor + prefix2 + suffix + suffix2
+			final = searchfor + " " + prefix2 + suffix + suffix2
 			print("Did you mean: %s (Opening in 3 seconds)" % (final))
 			time.sleep(3)
 			webbrowser.open('https://bing.com/search?q=%s' % (final))
