@@ -2,6 +2,9 @@ import webbrowser
 import json
 import random
 import time
+import ctypes
+
+ctypes.windll.kernel32.SetConsoleTitleA(b"Bing")
 
 with open("pornlist.json") as f:
     pornlist = json.load(f)
