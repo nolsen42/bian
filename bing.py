@@ -1,10 +1,15 @@
+#!/usr/bin/env python3
 import webbrowser
 import json
 import random
 import time
 import ctypes
+import os
 
-ctypes.windll.kernel32.SetConsoleTitleA(b"Bing")
+if os.name == 'nt':
+   ctypes.windll.kernel32.SetConsoleTitleA(b"Bing")
+else:
+   pass
 
 with open("pornlist.json") as f:
     pornlist = json.load(f)
