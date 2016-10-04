@@ -3,20 +3,20 @@ import webbrowser
 import json
 import random
 import time
-import ctypes
 import os
 
 if os.name == 'nt':
-   ctypes.windll.kernel32.SetConsoleTitleA(b"Bing")
+    import ctypes
+    ctypes.windll.kernel32.SetConsoleTitleA(b"Bing")
 else:
-   pass
+    pass
 
 with open("pornlist.json") as f:
     pornlist = json.load(f)
 
 def main():
 	while True:
-		searchfor = input("Search (with Bing): ")
+        searchfor = input("Search (with Bing): ")
 		prefix = random.choice(pornlist['prefix'])
 		prefix2 = random.choice(pornlist['prefix2'])
 		suffix = random.choice(pornlist['suffix'])
