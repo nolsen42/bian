@@ -29,4 +29,9 @@ def main():
         time.sleep(3)
         webbrowser.open('https://bing.com/search?q=%s' % (final))
 
-main()
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("ERROR: Refused to try bing.")
+        main()
